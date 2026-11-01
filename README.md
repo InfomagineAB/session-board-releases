@@ -6,7 +6,7 @@ This repository holds only the installer and update packages. The source code is
 
 ## Install
 
-1. Open [Releases](../../releases/latest) and download `SessionBoard-win-Setup.exe`.
+1. Open [Releases](../../releases/latest) and download `SessionBoard-stable-Setup.exe`.
 2. Run it. No administrator rights are needed; it installs for your Windows user only.
 3. Windows may show "Windows protected your PC" the first time, because the app is not code-signed yet. Choose **More info → Run anyway**. Updates after that install without the warning.
 
