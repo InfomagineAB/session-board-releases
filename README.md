@@ -8,7 +8,7 @@ This repository holds only the installer and update packages. The source code is
 
 1. Open [Releases](../../releases/latest) and download `SessionBoard-stable-Setup.exe`.
 2. Run it. No administrator rights are needed; it installs for your Windows user only.
-3. Windows may show "Windows protected your PC" the first time, because the app is not code-signed yet. Choose **More info → Run anyway**. Updates after that install without the warning.
+3. Windows may show "Windows protected your PC" the first time, because the app is not code-signed yet. Choose **More info → Run anyway**. Updates after that install without the warning. The publisher in the file details is Infomagine AB.
 
 Claude's desktop app must be running with its window open (minimised is fine).
 
@@ -28,7 +28,7 @@ Session Board only watches Claude. It needs no administrator rights and sends no
 **It writes** only its own files:
 - Settings and the remembered session list: `%APPDATA%\SessionBoard`.
 - A log for troubleshooting: `%USERPROFILE%\SessionBoard-logs` (stays on your PC).
-- Its own "Start with Windows" entry, and only if you turn that on.
+- Its own "Start with Windows" entry (Setup turns it on, the tray menu turns it off, uninstalling removes it).
 
 **It does**, only when you click:
 - Opens a session in Claude: clicks that session in Claude's list, or opens a `claude://` link. It never opens web links or other apps' links.
@@ -37,7 +37,9 @@ Session Board only watches Claude. It needs no administrator rights and sends no
 
 **It never**:
 - sends your data, session titles or logs anywhere, or collects usage statistics;
-- runs commands, scripts or other programs (other than restarting itself to update);
+- runs commands, scripts or other programs (other than restarting itself, e.g. to update); Claude's links are handed to Windows' own app launcher;
+- hooks into other programs or into Windows (no keyboard, mouse or system-wide window hooks);
+- copies other apps' data anywhere (Claude's notifications are read in place, read-only);
 - reads or changes other apps' windows, files or settings, or Claude's settings;
 - gives anyone remote access to your computer.
 
